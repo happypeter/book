@@ -49,11 +49,8 @@ a {
   display: block;
 }
 #header {
-  background: teal;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background: #009688;
+  // 类似于 teal 的一种颜色
   padding-top: 10px;
 }
 .top-bg {
