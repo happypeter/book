@@ -12,7 +12,7 @@ title: 首页
 </div>
 
 <div class="container">
-  <img class="book-cover" src="images/index/cover.png"/>
+  <img class="book-cover" src="images/index/cover.jpg"/>
 </div>
 
 <section class='book'>
