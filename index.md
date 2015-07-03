@@ -13,21 +13,12 @@ title: 首页
 
 <div class="container">
   <img class="book-cover" src="images/index/cover.jpg"/>
-</div>
-
-<section class='book'>
-  <div class='book-author'>
-    <a href="https://github.com/happypeter">happypeter</a>
-  </div>
   <p class='book-description'>
     这是一套视频课程，演示在自己的网站中集成支付接口来进行收款，用到的是允许个人用户申请的支付宝担保交易接口。这里是课程的视频笔记。
   </p>
-  <a href="http://haoqicat.com/happypeter/zhi-fu-bao-shou-kuan-ji-cheng/" class="read-btn">观看视频课程</a>
+  <div class='book-author'>
+    <a href="https://github.com/happypeter">happypeter</a>
+  </div>
 </div>
-</div>
-</section>
-<div class="divider">
-  <a href="http://haoqicat.com/happypeter/zhi-fu-bao-shou-kuan-ji-cheng/">视频课程在好奇猫</a>
-</div>
-</div>
+
 {% include toc.html %}
