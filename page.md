@@ -65,7 +65,3 @@ html 风格：
 
 ![](images/bankster.png)
 
-
-也可以就是一张方块图。
-
-![](images/open_wins.png)
