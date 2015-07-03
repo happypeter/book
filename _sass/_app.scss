@@ -38,16 +38,24 @@ a {
   width: 96%;
   margin: 0 auto;
 }
+
 .header {
-  display: block;
   background-color: #00BCD4;
   box-shadow: 0 2px 5px rgba(0,0,0,0.26);
+}
+
+.page.header {
   left: 0;
   right: 0;
   top: 0;
   z-index: 1;
   position: fixed;
 }
+
+.index.header {
+  height: 300px;
+}
+
 .home {
   color: #fff;
   line-height: 64px;
