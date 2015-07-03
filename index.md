@@ -7,7 +7,7 @@ title: go responsive
   <div class='wrapper-inside clearfix'>
     <div class='top-large'>
       <div class='book-title'>
-        支付宝收款集成
+        关于书的书
       </div>
       <div class='book-author'>
         <a href="https://github.com/happypeter">happypeter</a>
