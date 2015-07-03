@@ -17,7 +17,7 @@ title: go responsive
       </p>
       <a href="http://haoqicat.com/happypeter/zhi-fu-bao-shou-kuan-ji-cheng/" class="read-btn">观看视频课程</a>
     </div>
-    <img alt="responsive" class="book-image" src="images/alipay.jpg"/>
+    <img alt="responsive" class="book-image" src="images/index/cover.png"/>
   </div>
 </section>
 <div class="divider">
