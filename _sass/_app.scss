@@ -44,6 +44,22 @@ a {
   box-shadow: 0 2px 5px rgba(0,0,0,0.26);
 }
 
+
+// landing page
+
+.index.header {
+}
+
+h1.book-title {
+  color: white;
+  margin: 0;
+  padding-top: 70px;
+  padding-bottom: 30px;
+}
+
+
+// page
+
 .page.header {
   left: 0;
   right: 0;
@@ -52,9 +68,6 @@ a {
   position: fixed;
 }
 
-.index.header {
-  height: 300px;
-}
 
 .home {
   color: #fff;
