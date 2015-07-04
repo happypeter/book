@@ -158,3 +158,19 @@ code {
   margin-top: 9px;
   overflow-x: auto;
 }
+
+
+// index page toc
+
+td.index {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  background-color: rgb(82, 179, 168);
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+}
+td.title a {
+  line-height: 40px;
+}
