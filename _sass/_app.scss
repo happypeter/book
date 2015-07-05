@@ -58,11 +58,16 @@ h1.book-title {
   padding-bottom: 30px;
 }
 
-img.book-cover {
+.book-cover {
   width: 70%;
   display: block;
   margin: 0 auto;
   margin-top: 20px;
+  img {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+  }
 }
 
 // page
