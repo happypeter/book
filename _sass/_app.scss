@@ -162,6 +162,11 @@ code {
 
 // index page toc
 
+.toc {
+  .chapter {
+    margin-bottom: 20px;
+  }
+}
 .toc .index {
   width: 40px;
   height: 40px;
@@ -170,6 +175,10 @@ code {
   color: white;
   font-weight: bold;
   font-size: 18px;
+  float: left;
+}
+.toc .title {
+  float: left;
 }
 .toc .title a {
   line-height: 40px;
