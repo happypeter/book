@@ -162,7 +162,7 @@ code {
 
 // index page toc
 
-td.index {
+.toc .index {
   width: 40px;
   height: 40px;
   text-align: center;
@@ -171,6 +171,6 @@ td.index {
   font-weight: bold;
   font-size: 18px;
 }
-td.title a {
+.toc .title a {
   line-height: 40px;
 }
