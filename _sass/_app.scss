@@ -13,6 +13,7 @@ body {
 @media (max-width: 500px) {
   body {
     font-size: 91%;
+    width: 300px;
   }
 }
 
@@ -209,5 +210,9 @@ code {
   a {
     color: white;
     line-height: 90px;
+    padding: 0 20px;
+    font-weight: bold;
+    font-size: 23px;
   }
+}
 }
