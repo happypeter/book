@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+.container {
+  width: 960px;
+  margin: 0 auto;
+}
+
+.heading {
+  line-height: 2;
+  background: teal;
+  color: #fff;
+  text-align: center;
+  font-size: 28px;
+}
+
+.books {
+  padding-top: 50px;
+}
+.book {
+  width: 300px;
+  float: left;
+  text-align: center;
+}
+.book img {
+  padding: 10px;
+  border: 1px solid #ddd;
+  width: 230px;
+}
+
+.book .name {
+  padding: 30px 0;
+  font-size: 18px;
+}
+
