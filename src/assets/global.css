@@ -1,0 +1,35 @@
+
+body {
+  margin: 0
+}
+
+a {
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  margin: 0;
+  
+}
+
+#components-layout-demo-responsive .logo {
+  height: 32px;
+  background: rgba(255,255,255,.2);
+  margin: 16px;
+}
+
+.ant-layout-header {
+  background-color: #0A97A9!important
+}
+
+.ant-layout-sider-children {
+  background-color: #0A97A9!important;
+}
+
+.ant-menu {
+  background-color: #0A97A9!important;
+}

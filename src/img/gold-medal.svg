@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="89px" height="103px" viewBox="0 0 89 103" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>gold-medal</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-60.000000, -613.000000)">
+        <g id="on-row" transform="translate(0.000000, 586.000000)">
+            <g id="gold-medal" transform="translate(60.149875, 27.000000)" fill-rule="nonzero">
+                <polygon id="Shape" fill="#BF392C" points="88.2198168 0 58.6918869 0 16.0399667 62 45.5678966 62"></polygon>
+                <polygon id="Shape" fill="#E2574C" points="0 0 29.5280729 0 72.1798501 62 42.6517773 62"></polygon>
+                <path d="M46.1149042,32 C66.1283255,32 82.2048293,47.8137176 82.2048293,67.5 C82.2048293,87.1862824 66.1283255,103 46.1149042,103 C26.1014829,103 10.0249792,87.1862824 10.0249792,67.5 C10.0249792,47.8137176 26.1014829,32 46.1149042,32 Z" id="Shape" fill="#EFC75E"></path>
+                <path d="M46.1149042,42 C31.7793575,42 20.0499584,53.6998269 20.0499584,68 C20.0499584,82.3001731 31.7790105,94 46.1149042,94 C60.450798,94 72.1798501,82.3001731 72.1798501,68 C72.1798501,53.6998269 60.450451,42 46.1149042,42 Z M46.1149042,87.4998269 C35.3630707,87.4998269 26.5663683,78.7246971 26.5663683,68 C26.5663683,57.2753029 35.3634177,48.5001731 46.1149042,48.5001731 C56.8663908,48.5001731 65.6634401,57.2753029 65.6634401,68 C65.6634401,78.7246971 56.8663908,87.4998269 46.1149042,87.4998269 Z" id="Shape" fill="#D7B354"></path>
+            </g>
+            <text id="1" font-family="PingFangSC-Regular, PingFang SC" font-size="40" font-weight="normal" fill="#353131">
+                <tspan x="96.48" y="103">1</tspan>
+            </text>
+        </g>
+    </g>
+</svg>
