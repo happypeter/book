@@ -23,7 +23,7 @@ export default () => {
         <div className="container" >
           <div className="book-box">
             <img src={require('../img/gold-medal.svg')} />
-            <div className="book">
+            <Link to='/book' className="book">
               <div className="line"></div>
               <div className="cover">
                 <div className="pic">
@@ -32,7 +32,7 @@ export default () => {
                 <h2 className="title">Git 和 Github 上手</h2>
                 <span>作者：happypeter</span>
               </div>
-            </div>
+            </Link>
           </div>
           <div className="book-box">
             <img src={require('../img/gold-medal.svg')} />
@@ -53,7 +53,7 @@ export default () => {
         <div className="container" >
           <div className="book-box">
             <img src={require('../img/gold-medal.svg')} />
-            <div className="book">
+            <Link to='/book' className="book">
               <div className="line"></div>
               <div className="cover">
                 <div className="pic">
@@ -62,11 +62,11 @@ export default () => {
                 <h2 className="title">Git 和 Github 上手</h2>
                 <span>作者：happypeter</span>
               </div>
-            </div>
+            </Link>
           </div>
           <div className="book-box">
             <img src={require('../img/gold-medal.svg')} />
-            <div className="book">
+            <Link to='/book' className="book">
               <div className="line"></div>
               <div className="cover">
                 <div className="pic">
@@ -75,7 +75,7 @@ export default () => {
                 <h2 className="title">Git 和 Github 上手</h2>
                 <span>作者：happypeter</span>
               </div>
-            </div>
+            </Link>
           </div>
         </div>
       </Books>
