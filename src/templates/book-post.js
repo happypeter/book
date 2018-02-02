@@ -12,8 +12,13 @@ export default ({ data }) => {
     <Wrap>
       <Helmet title={title} />
       <Header>
-        <img src={require('../img/head.svg')} />
-        <h2>好奇图书馆>{title}</h2>        
+        <Breadcrumb>
+          <Link to='/'>
+            <img src={require('../img/head.svg')} />
+            <h2>好奇图书馆></h2> 
+          </Link>   
+          <h2>{title}</h2>
+        </Breadcrumb>      
       </Header>
       <Main>
         <Sider>
@@ -71,16 +76,23 @@ const Wrap = styled.div`
 `
 
 const Header = styled.div`
-  display: flex;
-  height: 100px;
+display: flex;
+height: 100px;
   img {
-    margin-left: 24px;
+    margin: 0 24px;
   }
   h2 {
     font-weight: 400;
     margin: 0;
-    margin-left: 24px;
     line-height: 100px;
+  }
+`
+
+const Breadcrumb = styled.div`
+  display: flex;
+  height: 100px;
+  a {
+    display: flex;
   }
 `
 

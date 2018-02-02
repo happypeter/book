@@ -21,21 +21,13 @@ export default () => {
       </Header>
       <Books>
         <div className="container" >
-          <div className="book-box">
-            <img src={require('../img/gold-medal.svg')} />
-            <Link to='/book' className="book">
-              <div className="line"></div>
-              <div className="cover">
-                <div className="pic">
-                  <img src={require('../img/rabbit.png')} />
-                </div>
-                <h2 className="title">Git 和 Github 上手</h2>
-                <span>作者：happypeter</span>
-              </div>
-            </Link>
-          </div>
-          <div className="book-box">
-            <img src={require('../img/gold-medal.svg')} />
+        <div className="book-box">
+          <img src={require('../img/gold-medal.svg')} />
+          <div>
+            <div className="decorate">
+              <div className="i"></div>
+              <div className="i"></div>
+            </div>
             <Link to='/book' className="book">
               <div className="line"></div>
               <div className="cover">
@@ -48,34 +40,66 @@ export default () => {
             </Link>
           </div>
         </div>
+          <div className="book-box">
+            <img src={require('../img/gold-medal.svg')} />
+            <div>
+              <div className="decorate">
+                <div className="i"></div>
+                <div className="i"></div>
+              </div>
+              <Link to='/book' className="book">
+                <div className="line"></div>
+                <div className="cover">
+                  <div className="pic">
+                    <img src={require('../img/rabbit.png')} />
+                  </div>
+                  <h2 className="title">Git 和 Github 上手</h2>
+                  <span>作者：happypeter</span>
+                </div>
+              </Link>
+            </div>
+          </div>
+        </div>
       </Books>
       <Books>
         <div className="container" >
           <div className="book-box">
             <img src={require('../img/gold-medal.svg')} />
-            <Link to='/book' className="book">
-              <div className="line"></div>
-              <div className="cover">
-                <div className="pic">
-                  <img src={require('../img/rabbit.png')} />
-                </div>
-                <h2 className="title">Git 和 Github 上手</h2>
-                <span>作者：happypeter</span>
+            <div>
+              <div className="decorate">
+                <div className="i"></div>
+                <div className="i"></div>
               </div>
-            </Link>
+              <Link to='/book' className="book">
+                <div className="line"></div>
+                <div className="cover">
+                  <div className="pic">
+                    <img src={require('../img/rabbit.png')} />
+                  </div>
+                  <h2 className="title">Git 和 Github 上手</h2>
+                  <span>作者：happypeter</span>
+                </div>
+              </Link>
+            </div>
           </div>
           <div className="book-box">
             <img src={require('../img/gold-medal.svg')} />
-            <Link to='/book' className="book">
-              <div className="line"></div>
-              <div className="cover">
-                <div className="pic">
-                  <img src={require('../img/rabbit.png')} />
-                </div>
-                <h2 className="title">Git 和 Github 上手</h2>
-                <span>作者：happypeter</span>
+            <div>
+              <div className="decorate">
+                <div className="i"></div>
+                <div className="i"></div>
               </div>
-            </Link>
+              <Link to='/book' className="book">
+                <div className="line"></div>
+                <div className="cover">
+                  <div className="pic">
+                    <img src={require('../img/rabbit.png')} />
+                  </div>
+                  <h2 className="title">Git 和 Github 上手</h2>
+                  <span>作者：happypeter</span>
+                </div>
+              </Link>
+            </div>
           </div>
         </div>
       </Books>
@@ -113,6 +137,18 @@ const Books = styled.div`
       display: flex;
       align-items: flex-start;
       margin-bottom: 220px;
+      .decorate {
+        margin-left: 100px;
+        display:flex;
+        justify-content: space-between;
+        padding: 0 40px;
+        .i {
+          width: 19px;
+          height: 64px;
+          background: #A12C2C;
+          
+        }
+      }
       .book {
         display: flex;
         align-items: flex-start;
@@ -133,6 +169,7 @@ const Books = styled.div`
           padding: 40px 0;
           flex-direction: column;
           justify-content: space-between;
+          color: #353131;
           .pic {
             display: flex;
             align-items: center;

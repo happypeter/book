@@ -7,8 +7,10 @@ export default ({ data }) => {
   return (
     <div>
       <Header>
-        <img src={require('../img/head.svg')} />
-        <h2>好奇图书馆</h2>
+        <Link className="home" to='/'>
+          <img src={require('../img/head.svg')} />
+          <h2>好奇图书馆</h2>
+        </Link>
       </Header>
       <Profile>
         <div className="container">
@@ -54,8 +56,10 @@ export const pageQuery = graphql`
 `
 
 const Header = styled.div`
-  display: flex;
-  height: 100px;
+  .home {    
+    display: flex;
+    height: 100px;
+  }
   img {
     margin-left: 24px;
   }
@@ -123,8 +127,13 @@ const StyledLink = styled(Link) `
   display: flex;
   align-items: center;
   padding: 20px 0;
+  color: #353131;
   box-shadow: 0 8px 24px rgba(0,0,0,.1);
   margin-bottom: 50px;
+  &:hover {
+    box-shadow: 0 8px 24px rgba(0,0,0,.2);
+    color: #353131;
+  }
   img {
     margin-left: 40px;
   }
