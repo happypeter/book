@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import Link from 'gatsby-link'
 
 export default ({ title, id, imgUrl }) => (
-  <StyledLink to="/book">
+  <StyledLink to={`/${id}`}>
     <div className="line" />
     <div className="cover">
       <div className="pic">
