@@ -1,13 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
 import Link from 'gatsby-link'
+import { getImgUrl } from '../utils'
 import { Input } from 'antd'
 const Search = Input.Search
 import BookBox from '../components/BookBox'
 import books from '../../config/index.json'
 
 export default () => {
-  console.log('books', books)
   return (
     <div>
       <Header>
@@ -22,7 +22,12 @@ export default () => {
       <Books>
         <div className="container">
           {books.map(book => (
-            <BookBox key={book.id} title={book.title} id={book.id} />
+            <BookBox
+              imgUrl={getImgUrl(book)}
+              key={book.id}
+              title={book.title}
+              id={book.id}
+            />
           ))}
         </div>
       </Books>

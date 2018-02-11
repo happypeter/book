@@ -2,12 +2,12 @@ import React from 'react'
 import styled from 'styled-components'
 import Link from 'gatsby-link'
 
-export default ({ title, id }) => (
+export default ({ title, id, imgUrl }) => (
   <StyledLink to="/book">
     <div className="line" />
     <div className="cover">
       <div className="pic">
-        <img src={require('../img/rabbit.png')} />
+        <img src={imgUrl} />
       </div>
       <h2 className="title">{title}</h2>
       <span>本书 id: {id}</span>
@@ -44,7 +44,9 @@ const StyledLink = styled(Link)`
       margin: 0 auto;
       border-radius: 50%;
       img {
+        width: 100%;
         margin: 0 auto;
+        filter: grayscale(100%);
       }
     }
     .title {
