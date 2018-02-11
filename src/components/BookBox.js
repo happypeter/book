@@ -4,7 +4,7 @@ import BookCover from './BookCover'
 import Medal from './Medal'
 import { TapeRed } from '../constants/Colors'
 
-export default () => (
+export default props => (
   <Wrap>
     <Left>
       <Medal />
@@ -12,7 +12,7 @@ export default () => (
     <Right>
       <Tape />
       <CoverWrap>
-        <BookCover id="git" title="Git 入门" />
+        <BookCover {...props} />
       </CoverWrap>
     </Right>
   </Wrap>

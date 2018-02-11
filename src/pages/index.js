@@ -4,8 +4,10 @@ import Link from 'gatsby-link'
 import { Input } from 'antd'
 const Search = Input.Search
 import BookBox from '../components/BookBox'
+import books from '../../config/index.json'
 
 export default () => {
+  console.log('books', books)
   return (
     <div>
       <Header>
@@ -19,14 +21,9 @@ export default () => {
       </Header>
       <Books>
         <div className="container">
-          <BookBox title="Git 技巧" id="git" logo="rabbit" />
-          <BookBox title="Git 技巧" id="git" logo="rabbit" />
-        </div>
-      </Books>
-      <Books>
-        <div className="container">
-          <BookBox title="Git 技巧" id="git" logo="rabbit" />
-          <BookBox title="Git 技巧" id="git" logo="rabbit" />
+          {books.map(book => (
+            <BookBox key={book.id} title={book.title} id={book.id} />
+          ))}
         </div>
       </Books>
       <Footer>
