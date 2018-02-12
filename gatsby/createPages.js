@@ -2,6 +2,31 @@ const path = require(`path`)
 
 module.exports = async ({ graphql, boundActionCreators }) => {
   const { createPage } = boundActionCreators
+  const allToc = await graphql(`
+    {
+      allTocJson {
+        edges {
+          node {
+            fields {
+              bookId
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  allToc.data.allTocJson.edges.map(({ node }) => {
+    const { bookId } = node.fields
+    createPage({
+      path: bookId,
+      component: path.resolve(`./src/templates/book.js`),
+      context: {
+        bookId
+      }
+    })
+  })
+
   const allMarkdown = await graphql(`
     {
       allMarkdownRemark {
