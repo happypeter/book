@@ -3,9 +3,9 @@ import styled from 'styled-components'
 import Link from 'gatsby-link'
 
 export default ({ data, pathContext }) => {
-  console.log('data', data)
   const { bookId } = pathContext
-  const toc = data.allTocJson.edges.map(t => t.node.id)
+
+  const toc = data.allTocJson.edges.map(t => t.node.episodeId)
   return (
     <Wrap>
       {toc.map(t => (
@@ -22,7 +22,7 @@ export const query = graphql`
     allTocJson(filter: { fields: { bookId: { eq: $bookId } } }) {
       edges {
         node {
-          id
+          episodeId
         }
       }
     }

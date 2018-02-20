@@ -7,7 +7,6 @@ module.exports = ({ node, getNode, boundActionCreators }) => {
     const fullPath = createFilePath({ node, getNode })
 
     const bookId = fullPath.split('/')[1]
-
     createNodeField({
       node,
       name: `bookId`,
