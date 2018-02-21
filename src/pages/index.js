@@ -4,14 +4,15 @@ import Link from 'gatsby-link'
 import { getImgUrl } from '../utils'
 import BookBox from '../components/BookBox'
 import books from '../../config/index.json'
+import Header from '../components/Header'
 
 export default () => {
   return (
     <div>
-      <Header>
+      <Header />
+      <Hero>
         <h1>好奇图书馆</h1>
-        <Input />
-      </Header>
+      </Hero>
       <Books>
         <div className="container">
           {books.map(book => (
@@ -31,8 +32,8 @@ export default () => {
   )
 }
 
-const Header = styled.div`
-  height: 446px;
+const Hero = styled.div`
+  height: 346px;
   background: #00bcd4;
   margin-bottom: 64px;
   h1 {
@@ -67,5 +68,3 @@ const Footer = styled.div`
     color: #fff;
   }
 `
-
-const Input = styled.input``
