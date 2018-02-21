@@ -8,7 +8,10 @@ export default ({ episodeId, episodes, bookId }) => {
       {episodes.map(t => (
         <StyledLink
           key={t.episodeId}
-          isCurrent={t.episodeId === episodeId}
+          isActive={() => t.episodeId === episodeId}
+          activeStyle={{
+            color: 'green'
+          }}
           to={`/${bookId}/${t.episodeId}`}
         >
           {t.title}
@@ -19,7 +22,6 @@ export default ({ episodeId, episodes, bookId }) => {
 }
 
 const StyledLink = styled(Link)`
-  color: ${props => (props.isCurrent ? 'red' : '#212121')};
   display: block;
   border: 2px solid red;
   padding: 20px;
