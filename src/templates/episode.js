@@ -1,9 +1,17 @@
 import React from 'react'
+import Header from '../components/Header'
 
 export default ({ data, pathContext }) => {
-  console.log('pathContext====', pathContext)
   const ep = data.markdownRemark
-  return <div dangerouslySetInnerHTML={{ __html: ep.html }} />
+  const { episode } = pathContext
+  const bookId = episode.split('/')[1]
+  console.log('pathContext.....', bookId)
+  return (
+    <div>
+      <Header bookId={bookId} />
+      <div dangerouslySetInnerHTML={{ __html: ep.html }} />
+    </div>
+  )
 }
 
 export const query = graphql`

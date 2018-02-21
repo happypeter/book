@@ -1,16 +1,11 @@
-import React from "react"
+import React from 'react'
 import Link from 'gatsby-link'
 import '../assets/global.css'
-import "prismjs/themes/prism-solarizedlight.css"
+import 'prismjs/themes/prism-solarizedlight.css'
 import styled from 'styled-components'
 
-
 export default ({ children }) => {
-  return (
-    <div>
-      {children()}
-    </div>
-  )
+  return <div>{children()}</div>
 }
 
 const Wrap = styled.div`
@@ -19,15 +14,14 @@ const Wrap = styled.div`
 `
 
 const Sider = styled.div`
-   flex-basis: 250px;
-   display: flex;
-   flex-direction: column;
-   border-right: 1px solid rgba(0, 0, 0, 0.12);
- `
- const Layout = styled.div`
-   flex-grow: 1;
- `
-
+  flex-basis: 250px;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid rgba(0, 0, 0, 0.12);
+`
+const Layout = styled.div`
+  flex-grow: 1;
+`
 
 const LogoWrap = styled.div`
   height: 64px;
@@ -50,7 +44,7 @@ const NavWrap = styled.div`
       display: block;
       font-size: 0.875rem;
       font-weight: 500;
-      font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+      font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
       line-height: 1.71429em;
       padding: 8px 16px;
     }
@@ -65,7 +59,7 @@ const Content = styled.div`
   padding-top: 80px;
 `
 
-const StyledLink = styled(Link) `
+const StyledLink = styled(Link)`
   display: block;
   color: rgba(0, 0, 0, 0.87);
   .btn {
@@ -79,13 +73,12 @@ const StyledLink = styled(Link) `
     background-color: #fff;
     border-radius: 0;
   }
-  .ant-btn-danger:hover, .ant-btn-danger:focus {
+  .ant-btn-danger:hover,
+  .ant-btn-danger:focus {
     color: #000;
     background-color: #f5f5f5;
   }
   .ant-btn-clicked:after {
-    border-color:#f5f5f5
+    border-color: #f5f5f5;
   }
 `
-
-
