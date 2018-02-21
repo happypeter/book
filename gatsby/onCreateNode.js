@@ -14,11 +14,11 @@ module.exports = ({ node, getNode, boundActionCreators }) => {
     })
   }
   if (node.internal.type === `MarkdownRemark`) {
-    const slug = createFilePath({ node, getNode, basePath: `pages` })
+    const episode = createFilePath({ node, getNode, basePath: `pages` })
     createNodeField({
       node,
-      name: `slug`,
-      value: slug
+      name: `episode`,
+      value: episode
     })
   }
 }

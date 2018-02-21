@@ -7,8 +7,8 @@ export default ({ data, pathContext }) => {
 }
 
 export const query = graphql`
-  query PageQuery($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
+  query PageQuery($episode: String!) {
+    markdownRemark(fields: { episode: { eq: $episode } }) {
       html
     }
   }

@@ -18,7 +18,6 @@ module.exports = async ({ graphql, boundActionCreators }) => {
 
   allToc.data.allTocJson.edges.map(({ node }) => {
     const { bookId } = node.fields
-    console.log('createPages.js--------', bookId)
     createPage({
       path: bookId,
       component: path.resolve(`./src/templates/book.js`),
@@ -34,7 +33,7 @@ module.exports = async ({ graphql, boundActionCreators }) => {
         edges {
           node {
             fields {
-              slug
+              episode
             }
           }
         }
@@ -43,15 +42,12 @@ module.exports = async ({ graphql, boundActionCreators }) => {
   `)
 
   allMarkdown.data.allMarkdownRemark.edges.map(({ node }) => {
-    const { slug } = node.fields
-    const pid = Number(slug.split('/')[2])
-    console.log('slug.....', slug)
+    const { episode } = node.fields
     createPage({
-      path: slug,
+      path: episode,
       component: path.resolve(`./src/templates/episode.js`),
       context: {
-        slug,
-        pid
+        episode
       }
     })
   })
