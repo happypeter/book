@@ -43,11 +43,13 @@ module.exports = async ({ graphql, boundActionCreators }) => {
 
   allMarkdown.data.allMarkdownRemark.edges.map(({ node }) => {
     const { episode } = node.fields
+    const bookId = episode.split('/')[1]
     createPage({
       path: episode,
       component: path.resolve(`./src/templates/episode.js`),
       context: {
-        episode
+        episode,
+        bookId
       }
     })
   })
