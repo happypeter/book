@@ -1,7 +1,6 @@
 module.exports = {
   plugins: [
     'gatsby-plugin-styled-components',
-    'gatsby-plugin-antd',
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -11,10 +10,8 @@ module.exports = {
     {
       resolve: `gatsby-transformer-remark`,
       options: {
-        plugins: [
-          `gatsby-remark-prismjs`
-        ]
-      } 
+        plugins: [`gatsby-remark-prismjs`]
+      }
     },
     'gatsby-transformer-json',
     'gatsby-plugin-react-helmet'

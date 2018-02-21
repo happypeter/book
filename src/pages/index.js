@@ -2,8 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import Link from 'gatsby-link'
 import { getImgUrl } from '../utils'
-import { Input } from 'antd'
-const Search = Input.Search
 import BookBox from '../components/BookBox'
 import books from '../../config/index.json'
 
@@ -12,12 +10,7 @@ export default () => {
     <div>
       <Header>
         <h1>好奇图书馆</h1>
-        <Search
-          className="search"
-          placeholder="search"
-          onSearch={value => console.log(value)}
-          style={{ width: 426 }}
-        />
+        <Input />
       </Header>
       <Books>
         <div className="container">
@@ -74,3 +67,5 @@ const Footer = styled.div`
     color: #fff;
   }
 `
+
+const Input = styled.input``
