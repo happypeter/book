@@ -2,21 +2,19 @@ import React from 'react'
 import Link from 'gatsby-link'
 import styled from 'styled-components'
 
-export default ({ episodeId, toc }) => {
-  console.log('currentItem', episodeId, toc)
+export default ({ episodeId, episodes, bookId }) => {
   return (
     <div>
-      {toc.map(t => (
+      {episodes.map(t => (
         <StyledLink
-          key={t}
-          isActive={() => t === episodeId}
+          key={t.episodeId}
+          isActive={() => t.episodeId === episodeId}
           activeStyle={{
-            fontWeight: 'bold',
-            color: 'red'
+            color: 'green'
           }}
-          to={t}
+          to={`/${bookId}/${t.episodeId}`}
         >
-          {t}
+          {t.title}
         </StyledLink>
       ))}
     </div>

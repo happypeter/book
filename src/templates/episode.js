@@ -5,14 +5,12 @@ import Sidebar from '../components/Sidebar'
 export default ({ data, pathContext }) => {
   const { episode, bookId } = pathContext
   const episodeId = episode.split('/')[2]
-  console.log('data====', data)
-  const toc = data.allTocJson.edges.map(t => t.node.episodeId)
-  console.log('pathContext====', pathContext)
+  const episodes = data.allTocJson.edges.map(t => t.node)
   const ep = data.markdownRemark
   return (
     <div>
       <Header bookId={bookId} />
-      <Sidebar toc={toc} episodeId={episodeId} />
+      <Sidebar episodes={episodes} episodeId={episodeId} bookId={bookId} />
       <div dangerouslySetInnerHTML={{ __html: ep.html }} />
     </div>
   )
@@ -27,6 +25,7 @@ export const query = graphql`
       edges {
         node {
           episodeId
+          title
         }
       }
     }
