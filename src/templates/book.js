@@ -8,15 +8,16 @@ import Header from '../components/Header'
 export default ({ data, pathContext }) => {
   const { bookId } = pathContext
   const book = books.find(t => t.id === bookId)
-  const toc = data.allTocJson.edges.map(t => t.node.episodeId)
+  const toc = data.allTocJson.edges.map(t => t.node)
+  console.log('toc', toc)
   return (
     <Wrap>
       <Header bookId={bookId} />
       <Img src={coverPngUrl(book)} />
       <Title>{book.title}</Title>
       {toc.map(t => (
-        <StyledLink key={t} to={`${bookId}/${t}`}>
-          {t}
+        <StyledLink key={t.episodeId} to={`${bookId}/${t.episodeId}`}>
+          {t.title}
         </StyledLink>
       ))}
     </Wrap>
@@ -29,6 +30,7 @@ export const query = graphql`
       edges {
         node {
           episodeId
+          title
         }
       }
     }
