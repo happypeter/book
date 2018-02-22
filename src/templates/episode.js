@@ -11,9 +11,15 @@ export default ({ data, pathContext }) => {
   return (
     <div>
       <Header bookId={bookId} />
-      <Sidebar episodes={episodes} episodeId={episodeId} bookId={bookId} />
-      <Title>{episode.title}</Title>
-      <div dangerouslySetInnerHTML={{ __html: ep.html }} />
+      <Content>
+        <Side>
+          <Sidebar episodes={episodes} episodeId={episodeId} bookId={bookId} />
+        </Side>
+        <Page>
+          <Title>{episode.title}</Title>
+          <Main dangerouslySetInnerHTML={{ __html: ep.html }} />
+        </Page>
+      </Content>
     </div>
   )
 }
@@ -34,4 +40,30 @@ export const query = graphql`
   }
 `
 
-const Title = styled.div``
+const Title = styled.div`
+  text-align: center;
+  border: 2px solid red;
+  padding: 20px;
+  font-size: 24px;
+`
+
+const Main = styled.div`
+  border: 2px solid teal;
+  width: 800px;
+  img {
+    width: 100%;
+  }
+`
+
+const Content = styled.div`
+  margin-top: 20px;
+  display: flex;
+`
+
+const Side = styled.div`
+  flex-basis: 200px;
+`
+
+const Page = styled.div`
+  padding-left: 20px;
+`
