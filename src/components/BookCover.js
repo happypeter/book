@@ -10,7 +10,7 @@ export default ({ title, id, imgUrl }) => (
         <img src={imgUrl} />
       </div>
       <h2 className="title">{title}</h2>
-      <span>本书 id: {id}</span>
+      <span>BookId: {id}</span>
     </div>
   </StyledLink>
 )
@@ -19,7 +19,7 @@ const StyledLink = styled(Link)`
   display: block;
   display: flex;
   width: 100%;
-  height: 403px;
+  height: 400px;
   background: #e7eae3;
   .line {
     height: 100%;

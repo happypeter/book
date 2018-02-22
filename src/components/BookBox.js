@@ -1,33 +1,19 @@
 import React from 'react'
 import styled from 'styled-components'
 import BookCover from './BookCover'
-import Medal from './Medal'
 import { TapeRed } from '../constants/Colors'
 
 export default props => (
   <Wrap>
-    <Left>
-      <Medal />
-    </Left>
-    <Right>
-      <Tape />
-      <CoverWrap>
-        <BookCover {...props} />
-      </CoverWrap>
-    </Right>
+    <Tape />
+    <CoverWrap>
+      <BookCover {...props} />
+    </CoverWrap>
   </Wrap>
 )
 
 const Wrap = styled.div`
-  display: flex;
-`
-
-const Left = styled.div`
-  margin-right: 106px;
-`
-
-const Right = styled.div`
-  width: 280px;
+  width: 300px;
 `
 
 const Tape = styled.div`
