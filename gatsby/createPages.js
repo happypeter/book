@@ -33,7 +33,7 @@ module.exports = async ({ graphql, boundActionCreators }) => {
         edges {
           node {
             fields {
-              episode
+              episodePath
             }
           }
         }
@@ -42,14 +42,16 @@ module.exports = async ({ graphql, boundActionCreators }) => {
   `)
 
   allMarkdown.data.allMarkdownRemark.edges.map(({ node }) => {
-    const { episode } = node.fields
-    const bookId = episode.split('/')[1]
+    const { episodePath } = node.fields
+    const bookId = episodePath.split('/')[1]
+    const episodeId = episodePath.split('/')[2]
     createPage({
-      path: episode,
+      path: episodePath,
       component: path.resolve(`./src/templates/episode.js`),
       context: {
-        episode,
-        bookId
+        episodeId,
+        bookId,
+        episodePath
       }
     })
   })

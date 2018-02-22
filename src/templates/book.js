@@ -7,9 +7,9 @@ import Header from '../components/Header'
 
 export default ({ data, pathContext }) => {
   const { bookId } = pathContext
+  console.log('pathContext..', pathContext)
   const book = books.find(t => t.id === bookId)
   const toc = data.allTocJson.edges.map(t => t.node)
-  console.log('toc', toc)
   return (
     <Wrap>
       <Header bookId={bookId} />
