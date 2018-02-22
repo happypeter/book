@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Link from 'gatsby-link'
-import { getImgUrl } from '../utils'
+import { coverPngUrl } from '../constants/Assets'
 import BookBox from '../components/BookBox'
 import books from '../../config/index.json'
 import Header from '../components/Header'
@@ -17,7 +17,7 @@ export default () => {
         <div className="container">
           {books.map(book => (
             <BookBox
-              imgUrl={getImgUrl(book)}
+              imgUrl={coverPngUrl(book)}
               key={book.id}
               title={book.title}
               id={book.id}
