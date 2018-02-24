@@ -1,10 +1,28 @@
-# gatsby-starter-hello-world
-Starter with the bare essentials needed for a [Gatsby](https://www.gatsbyjs.org/) site
+### 启动项目
 
-Install this starter (assuming Gatsby is installed) by running from your CLI:
+
+首先要保证项目顶级的 data/ 文件夹中有书稿
+
 ```
-gatsby new gatsby-site https://github.com/gatsbyjs/gatsby-starter-hello-world
+cd data
+git clone git@github.com:happypeter/js-monkey.git
+git clone git@github.com:haoqicat/go-responsive.git
 ```
 
-## Running in development
-`gatsby develop`
+这样数据就填充好了
+
+然后运行 
+
+```
+npm i
+npm run develop
+```
+
+就可以进行开发了
+
+### 编译项目
+
+
+```
+npm run build
+```
