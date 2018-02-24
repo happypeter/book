@@ -5,8 +5,13 @@
     "github": "haoqicat"
   },
   {
+    "id": "js-ant",
+    "title": "JS 蚂蚁",
+    "github": "haoqi-lib"
+  },
+  {
     "id": "js-monkey",
-    "title": "JS Monkey",
+    "title": "JS 猴子",
     "github": "happypeter"
   }
 ]
