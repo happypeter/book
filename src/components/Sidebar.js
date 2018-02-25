@@ -10,7 +10,7 @@ export default ({ episodeId, episodes, bookId }) => {
           key={t.episodeId}
           isActive={() => t.episodeId === episodeId}
           activeStyle={{
-            color: 'green'
+            color: '#fff'
           }}
           to={`/${bookId}/${t.episodeId}`}
         >
@@ -23,6 +23,8 @@ export default ({ episodeId, episodes, bookId }) => {
 
 const StyledLink = styled(Link)`
   display: block;
-  border: 2px solid red;
+  color: rgba(255, 255, 255, 0.64);
   padding: 20px;
+  height: 100%;
+  overflow-y: scroll;
 `

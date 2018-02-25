@@ -6,14 +6,58 @@ import books from '../../config/index.json'
 export default ({ bookId }) => {
   const book = books && books.find(t => t.id === bookId)
   return (
-    <div>
-      <StyledLink to="/">好奇图书馆</StyledLink>
+    <Header>
+      <Nav>
+        <img src={require('../img/head.svg')} />
+        <StyledLink to="/">好奇图书馆</StyledLink>
 
-      {book && <StyledLink to={`/${book.id}`}>>{book.title}</StyledLink>}
-    </div>
+        {book && <StyledLink to={`/${book.id}`}>> {book.title}</StyledLink>}
+      </Nav>
+      <Search>
+        <img src={require('../img/Shape.svg')} />
+        <input type="text" />
+      </Search>
+    </Header>
   )
 }
 
+const Header = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  padding: 0 24px;
+  flex-shrink: 0;
+`
+
 const StyledLink = styled(Link)`
-  color: red;
+  color: #151313;
+  line-height: 100px;
+  margin-left: 18px;
+  font-size: 24px;
+`
+const Nav = styled.div`
+  display: flex;
+`
+
+const Search = styled.div`
+  position: relative;
+  img {
+    position: absolute;
+    top: 15px;
+    left: 5px;
+  }
+  input {
+    width: 325px;
+    height: 54px;
+    background-color: #a7f0f8;
+    border: none;
+    border-radius: 5px;
+    font-size: 24px;
+    color: #151313;
+    padding-left: 35px;
+  }
+  input:focus {
+    outline: none;
+  }
 `

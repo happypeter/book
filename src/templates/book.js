@@ -13,13 +13,28 @@ export default ({ data, pathContext }) => {
   return (
     <Wrap>
       <Header bookId={bookId} />
-      <Img src={coverPngUrl(book)} />
-      <Title>{book.title}</Title>
-      {toc.map(t => (
-        <StyledLink key={t.episodeId} to={`${bookId}/${t.episodeId}`}>
-          {t.title}
-        </StyledLink>
-      ))}
+      <Hero>
+        <div className="contianed">
+          <div className="cover">
+            <Img>
+              <img src={coverPngUrl(book)} />
+            </Img>
+            <Title>{book.title}</Title>
+          </div>
+        </div>
+      </Hero>
+      <Toc>
+        <div className="contained">
+          <ul>
+            {toc.map(t => (
+              <StyledLink key={t.episodeId} to={`${bookId}/${t.episodeId}`}>
+                <img src={require('../img/popcorn.svg')} />
+                <span>{t.title}</span>
+              </StyledLink>
+            ))}
+          </ul>
+        </div>
+      </Toc>
     </Wrap>
   )
 }
@@ -37,16 +52,71 @@ export const query = graphql`
   }
 `
 
-const Wrap = styled.div`
-  width: 300px;
-  margin: 20px auto;
+const Wrap = styled.div``
+
+const Hero = styled.div`
+  background: linear-gradient(to right, #139cab 0%, #2bcee2 100%);
+  .contianed {
+    max-width: 1200px;
+    height: 384px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    .cover {
+      display: flex;
+      align-items: center;
+    }
+  }
+`
+
+const Img = styled.div`
+  width: 186px;
+  height: 186px;
+  border-radius: 50%;
+  background-color: #fff;
+  margin-left: 210px;
+  display: flex;
+  align-items: center;
+  img {
+    width: 90%;
+    margin: 0 auto;
+  }
+`
+const Title = styled.div`
+  font-size: 40px;
+  color: #fff;
+  margin-left: 40px;
+`
+const Toc = styled.div`
+  .contained {
+    max-width: 1200px;
+    margin: 0 auto;
+    ul {
+      list-style: none;
+      padding: 0;
+      width: 658px;
+      margin: 0 auto;
+      margin-top: 110px;
+      font-size: 24px;
+    }
+  }
 `
 
 const StyledLink = styled(Link)`
-  display: block;
-  padding: 10px;
-  margin: 5px;
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+  color: #353131;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  margin-bottom: 50px;
+  &:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    color: #353131;
+  }
+  img {
+    margin-left: 40px;
+  }
+  span {
+    margin-left: 20px;
+  }
 `
-
-const Img = styled.img``
-const Title = styled.div``

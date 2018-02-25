@@ -9,7 +9,7 @@ export default ({ data, pathContext }) => {
   const episode = episodes.find(t => t.episodeId === episodeId)
   const ep = data.markdownRemark
   return (
-    <div>
+    <Wrap>
       <Header bookId={bookId} />
       <Content>
         <Side>
@@ -20,7 +20,7 @@ export default ({ data, pathContext }) => {
           <Main dangerouslySetInnerHTML={{ __html: ep.html }} />
         </Page>
       </Content>
-    </div>
+    </Wrap>
   )
 }
 
@@ -40,30 +40,57 @@ export const query = graphql`
   }
 `
 
+const Wrap = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+`
+
 const Title = styled.div`
+  width: 810px;
+  margin: 0 auto;
   text-align: center;
-  border: 2px solid red;
+  flex-shrink: 0;
+  border-radius: 6px 6px 0 0;
   padding: 20px;
   font-size: 24px;
+  background-color: #0a97a9;
+  color: #fff;
+  margin-top: 24px;
+  margin-bottom: 24px;
 `
 
 const Main = styled.div`
-  border: 2px solid teal;
-  width: 800px;
+  border-radius: 6px;
+  background-color: #fff;
+  width: 810px;
+  margin: 0 auto;
+  padding: 20px;
+  font-size: 14px;
+  flex-grow: 1;
+  overflow-y: scroll;
   img {
     width: 100%;
   }
 `
 
 const Content = styled.div`
-  margin-top: 20px;
   display: flex;
+  flex-grow: 1;
 `
 
 const Side = styled.div`
-  flex-basis: 200px;
+  flex-basis: 320px;
+  background-color: #0a97a9;
+  flex-shrink: 0;
+  overflow-y: scroll;
 `
 
 const Page = styled.div`
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
   padding-left: 20px;
+  background: linear-gradient(to left top, #ddf3f6 0%, #27d4e7 100%);
+  padding-bottom: 15px;
 `
