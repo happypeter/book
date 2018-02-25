@@ -35,6 +35,9 @@ export default ({ data, pathContext }) => {
           </ul>
         </div>
       </Toc>
+      <Footer>
+        <h2>好奇图书馆</h2>
+      </Footer>
     </Wrap>
   )
 }
@@ -78,8 +81,9 @@ const Img = styled.div`
   display: flex;
   align-items: center;
   img {
-    width: 90%;
-    margin: 0 auto;
+    width: 100%;
+    filter: grayscale(100%);
+    filter: gray;
   }
 `
 const Title = styled.div`
@@ -118,5 +122,15 @@ const StyledLink = styled(Link)`
   }
   span {
     margin-left: 20px;
+  }
+`
+
+const Footer = styled.div`
+  background: #2a3745;
+  h2 {
+    text-align: center;
+    padding: 80px 0;
+    margin: 0;
+    color: #fff;
   }
 `

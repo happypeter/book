@@ -8,8 +8,11 @@ export default ({ bookId }) => {
   return (
     <Header>
       <Nav>
-        <img src={require('../img/head.svg')} />
-        <StyledLink to="/">好奇图书馆</StyledLink>
+        <StyledLink to="/">
+          {' '}
+          <img src={require('../img/head.svg')} />
+          好奇图书馆
+        </StyledLink>
 
         {book && <StyledLink to={`/${book.id}`}>> {book.title}</StyledLink>}
       </Nav>
@@ -31,10 +34,14 @@ const Header = styled.div`
 `
 
 const StyledLink = styled(Link)`
+  display: flex;
   color: #151313;
   line-height: 100px;
-  margin-left: 18px;
+
   font-size: 24px;
+  img {
+    margin-right: 18px;
+  }
 `
 const Nav = styled.div`
   display: flex;
@@ -45,7 +52,7 @@ const Search = styled.div`
   img {
     position: absolute;
     top: 15px;
-    left: 5px;
+    left: 15px;
   }
   input {
     width: 325px;
@@ -55,7 +62,7 @@ const Search = styled.div`
     border-radius: 5px;
     font-size: 24px;
     color: #151313;
-    padding-left: 35px;
+    padding-left: 50px;
   }
   input:focus {
     outline: none;

@@ -68,7 +68,7 @@ const Main = styled.div`
   padding: 20px;
   font-size: 14px;
   flex-grow: 1;
-  overflow-y: scroll;
+  overflow-y: auto;
   img {
     width: 100%;
   }
@@ -83,7 +83,7 @@ const Side = styled.div`
   flex-basis: 320px;
   background-color: #0a97a9;
   flex-shrink: 0;
-  overflow-y: scroll;
+  overflow-y: auto;
 `
 
 const Page = styled.div`
