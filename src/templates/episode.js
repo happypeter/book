@@ -81,6 +81,7 @@ const Content = styled.div`
 
 const Side = styled.div`
   flex-basis: 320px;
+  padding: 28px 0;
   background-color: #0a97a9;
   flex-shrink: 0;
   overflow-y: auto;

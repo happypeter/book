@@ -14,7 +14,9 @@ export default ({ bookId }) => {
           好奇图书馆
         </StyledLink>
 
-        {book && <StyledLink to={`/${book.id}`}>> {book.title}</StyledLink>}
+        {book && (
+          <StyledLink to={`/${book.id}`}>&nbsp;> {book.title}</StyledLink>
+        )}
       </Nav>
       <Search>
         <img src={require('../img/Shape.svg')} />
