@@ -6,6 +6,7 @@ import styled from 'styled-components'
 export default ({ data, pathContext }) => {
   const { episodeId, bookId } = pathContext
   const episodes = data.allTocJson.edges.map(t => t.node)
+  console.log('episodes...episodeId', episodes, episodeId)
   const episode = episodes.find(t => t.episodeId === episodeId)
   const ep = data.markdownRemark
   return (
@@ -15,7 +16,7 @@ export default ({ data, pathContext }) => {
         <Side>
           <Sidebar episodes={episodes} episodeId={episodeId} bookId={bookId} />
         </Side>
-        <Page>
+        <Page className="docSearch-content">
           <Title>{episode.title}</Title>
           <Main dangerouslySetInnerHTML={{ __html: ep.html }} />
         </Page>

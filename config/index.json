@@ -13,5 +13,10 @@
     "id": "js-monkey",
     "title": "JS 猴子",
     "github": "happypeter"
+  },
+  {
+    "id": "o-o-js",
+    "title": "JS 面向对象之旅",
+    "github": "haoqi-lib"
   }
 ]
