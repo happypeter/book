@@ -86,7 +86,7 @@ const Img = styled.div`
     filter: gray;
   }
 `
-const Title = styled.div`
+const Title = styled.h1`
   font-size: 40px;
   color: #fff;
   margin-left: 40px;

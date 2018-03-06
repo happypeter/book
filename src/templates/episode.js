@@ -47,7 +47,7 @@ const Wrap = styled.div`
   height: 100vh;
 `
 
-const Title = styled.div`
+const Title = styled.h1`
   width: 810px;
   margin: 0 auto;
   text-align: center;
