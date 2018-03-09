@@ -231,11 +231,11 @@ h1 {
   content: '';
   width: 14px;
   height: 14px;
-  background: #373940;
+  background: #90999C;
   z-index: 1000;
   top: -7px;
-  border-top: 1px solid #373940;
-  border-right: 1px solid #373940;
+  border-top: 1px solid #90999C;
+  border-right: 1px solid #90999C;
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
   border-radius: 2px;
@@ -268,7 +268,7 @@ h1 {
     border: none;
     z-index: 999;
     max-width: 600px;
-    min-width: 500px;
+    min-width: 325px;
   }
 }
 
@@ -373,7 +373,7 @@ h1 {
   font-size: 14px;
   letter-spacing: 0.08em;
   font-weight: 700;
-  background-color: #373940;
+  background-color: #90999C;
   text-transform: uppercase;
   color: #fff;
   margin: 0;
@@ -442,7 +442,7 @@ h1 {
   padding: 8px 0;
   text-align: center;
   font-size: 1.2em;
-  background-color: #373940;
+  background-color: #90999C;
   margin-top: -8px;
 }
 
