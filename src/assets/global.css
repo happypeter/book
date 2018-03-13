@@ -229,8 +229,8 @@ h1 {
   display: block;
   position: absolute;
   content: '';
-  width: 14px;
-  height: 14px;
+  width: 0px;
+  height: 0px;
   background: #90999C;
   z-index: 1000;
   top: -7px;
@@ -259,7 +259,6 @@ h1 {
     position: relative;
     top: -6px;
     border-radius: 4px;
-    margin: 6px 0 0;
     padding: 0;
     text-align: left;
     height: auto;
