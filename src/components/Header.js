@@ -25,15 +25,22 @@ export default ({ bookId }) => {
 }
 
 const Header = styled.div`
+  position: fixed;
+  top:0;
+  left: 0;
+  z-index:9999;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 100px;
+  width: 100vw;
+  background: #fff;
+  box-shadow: 0 calc(8px / 2) 8px rgba(0,0,0,.05);
   padding: 0 24px;
   flex-shrink: 0;
 `
 
-const StyledLink = styled(Link)`
+const StyledLink = styled(Link) `
   display: flex;
   color: #151313;
   line-height: 100px;

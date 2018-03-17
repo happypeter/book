@@ -44,7 +44,6 @@ export const query = graphql`
 const Wrap = styled.div`
   display: flex;
   flex-direction: column;
-  height: 100vh;
 `
 
 const Title = styled.h1`
@@ -69,7 +68,6 @@ const Main = styled.div`
   padding: 20px;
   font-size: 14px;
   flex-grow: 1;
-  overflow-y: auto;
   img {
     width: 100%;
   }
@@ -77,11 +75,14 @@ const Main = styled.div`
 
 const Content = styled.div`
   display: flex;
-  flex-grow: 1;
+  margin-top: 100px;
 `
 
 const Side = styled.div`
-  flex-basis: 320px;
+  height: calc(100vh - 100px);
+  width: 320px;
+  position: fixed;
+  left: 0;
   padding: 28px 0;
   background-color: #0a97a9;
   flex-shrink: 0;
@@ -92,7 +93,8 @@ const Page = styled.div`
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  padding-left: 20px;
   background: linear-gradient(to left top, #ddf3f6 0%, #27d4e7 100%);
   padding-bottom: 15px;
+  margin-left: 320px;
+  min-height: calc(100vh - 100px);
 `
