@@ -3,27 +3,42 @@ import Header from '../components/Header'
 import Sidebar from '../components/Sidebar'
 import styled from 'styled-components'
 
-export default ({ data, pathContext }) => {
-  const { episodeId, bookId } = pathContext
-  const episodes = data.allTocJson.edges.map(t => t.node)
-  console.log('episodes...episodeId', episodes, episodeId)
-  const episode = episodes.find(t => t.episodeId === episodeId)
-  const ep = data.markdownRemark
-  return (
-    <Wrap>
-      <Header bookId={bookId} />
-      <Content>
-        <Side>
-          <Sidebar episodes={episodes} episodeId={episodeId} bookId={bookId} />
-        </Side>
-        <Page className="docSearch-content">
-          <Title>{episode.title}</Title>
-          <Main dangerouslySetInnerHTML={{ __html: ep.html }} />
-        </Page>
-      </Content>
-    </Wrap>
-  )
+class Episode extends React.Component {
+  componentWillMount() {
+    if (this.props.location.hash) {
+      setTimeout(function () {
+        var top = window.scrollY;
+        scrollTo(0, top - 120);
+      }, 100);
+    }
+  }
+  render() {
+    const pathContext = this.props.pathContext
+    const data = this.props.data
+    const { episodeId, bookId } = pathContext
+    const episodes = data.allTocJson.edges.map(t => t.node)
+    console.log('episodes...episodeId', episodes, episodeId)
+    const episode = episodes.find(t => t.episodeId === episodeId)
+    const ep = data.markdownRemark
+    return (
+      <Wrap>
+        <Header bookId={bookId} />
+        <Content>
+          <Side>
+            <Sidebar episodes={episodes} episodeId={episodeId} bookId={bookId} />
+          </Side>
+          <Page className="docSearch-content">
+            <Title>{episode.title}</Title>
+            <Main dangerouslySetInnerHTML={{ __html: ep.html }} />
+          </Page>
+        </Content>
+      </Wrap>
+    )
+  }
 }
+
+export default Episode
+
 
 export const query = graphql`
   query PageQuery($episodePath: String!, $bookId: String!) {
