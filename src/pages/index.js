@@ -35,7 +35,7 @@ export default () => {
 const Hero = styled.div`
   height: 346px;
   background: #00bcd4;
-  margin-bottom: 64px;
+  margin: 100px 0 64px;
   h1 {
     text-align: center;
     color: #fff;

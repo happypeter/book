@@ -4,7 +4,7 @@ import Sidebar from '../components/Sidebar'
 import styled from 'styled-components'
 
 class Episode extends React.Component {
-  componentWillMount() {
+  componentDidMount() {
     if (this.props.location.hash) {
       setTimeout(function () {
         var top = window.scrollY;
@@ -13,8 +13,7 @@ class Episode extends React.Component {
     }
   }
   render() {
-    const pathContext = this.props.pathContext
-    const data = this.props.data
+    const { pathContext, data } = this.props
     const { episodeId, bookId } = pathContext
     const episodes = data.allTocJson.edges.map(t => t.node)
     console.log('episodes...episodeId', episodes, episodeId)

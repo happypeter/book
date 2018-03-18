@@ -59,6 +59,7 @@ const Wrap = styled.div``
 
 const Hero = styled.div`
   background: linear-gradient(to right, #139cab 0%, #2bcee2 100%);
+  margin-top: 100px;
   .contianed {
     max-width: 1200px;
     height: 384px;
@@ -106,7 +107,7 @@ const Toc = styled.div`
   }
 `
 
-const StyledLink = styled(Link)`
+const StyledLink = styled(Link) `
   display: flex;
   align-items: center;
   padding: 20px 0;
