@@ -37,14 +37,14 @@ const Search = styled.div`
   position: relative;
   img {
     position: absolute;
-    top: 15px;
+    top: 19px;
     left: 15px;
     z-index: 1000;
   }
   input {
     width: 325px;
     height: 54px;
-    background-color: #a7f0f8;
+    background-color: #A7CBD0;
     border: none;
     border-radius: 5px;
     font-size: 24px;

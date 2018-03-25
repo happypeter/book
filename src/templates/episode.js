@@ -68,7 +68,7 @@ const Title = styled.h1`
   border-radius: 6px 6px 0 0;
   padding: 20px;
   font-size: 24px;
-  background-color: #0a97a9;
+  background-color: #53A6AE;
   color: #fff;
   margin-top: 24px;
   margin-bottom: 24px;
@@ -98,7 +98,7 @@ const Side = styled.div`
   position: fixed;
   left: 0;
   padding: 28px 0;
-  background-color: #0a97a9;
+  background-color: #53A6AE;
   flex-shrink: 0;
   overflow-y: auto;
 `
@@ -107,7 +107,7 @@ const Page = styled.div`
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(to left top, #ddf3f6 0%, #27d4e7 100%);
+  background: linear-gradient(to left top, #FFFFFF 0%, #A7CBD0 100%);
   padding-bottom: 15px;
   margin-left: 320px;
   min-height: calc(100vh - 100px);

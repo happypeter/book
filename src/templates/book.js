@@ -58,7 +58,7 @@ export const query = graphql`
 const Wrap = styled.div``
 
 const Hero = styled.div`
-  background: linear-gradient(to right, #139cab 0%, #2bcee2 100%);
+  background: linear-gradient(to right, #469CA6 0%, #60BEC6 100%);
   margin-top: 100px;
   .contianed {
     max-width: 1200px;
@@ -127,7 +127,7 @@ const StyledLink = styled(Link) `
 `
 
 const Footer = styled.div`
-  background: #2a3745;
+  background: #90999C;
   h2 {
     text-align: center;
     padding: 80px 0;

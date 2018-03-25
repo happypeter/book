@@ -11,7 +11,7 @@ export default ({ bookId }) => {
       <Nav>
         <StyledLink to="/">
           {' '}
-          <img src={require('../img/head.svg')} />
+          <img src={require('../img/logo.svg')} />
           好奇图书馆
         </StyledLink>
 

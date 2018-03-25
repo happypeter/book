@@ -15,16 +15,16 @@ export default ({ title, id, imgUrl }) => (
   </StyledLink>
 )
 
-const StyledLink = styled(Link)`
+const StyledLink = styled(Link) `
   display: block;
   display: flex;
   width: 100%;
   height: 400px;
-  background: #e7eae3;
+  background: #A7CBD0;
   .line {
     height: 100%;
     width: 19px;
-    background: #01a6bb;
+    background: #D47490;
     margin-left: 14px;
   }
   .cover {
