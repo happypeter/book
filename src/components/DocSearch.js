@@ -54,4 +54,12 @@ const Search = styled.div`
   input:focus {
     outline: none;
   }
+  @media (max-width: 738px) {
+    input {
+      width: 225px;
+    }
+  }
+  @media (max-width: 630px) {
+    display: none;
+  }
 `

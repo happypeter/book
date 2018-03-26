@@ -16,13 +16,11 @@ export default ({ title, id, imgUrl }) => (
 )
 
 const StyledLink = styled(Link) `
-  display: block;
   display: flex;
   width: 100%;
   height: 400px;
   background: #A7CBD0;
   .line {
-    height: 100%;
     width: 19px;
     background: #D47490;
     margin-left: 14px;
@@ -55,6 +53,28 @@ const StyledLink = styled(Link) `
     span {
       display: block;
       text-align: center;
+    }
+  }
+  @media (max-width: 630px) {
+    height: auto;
+    background: #fff;
+    box-shadow: 0 8px 24px rgba(0,0,0,.1);
+    .line {
+      width: 12px;
+    }
+    .cover {
+      padding: 15px 0;
+    }
+    .cover .title {
+      text-align: left;
+      margin-left: 30px;
+      font-size: 20px;
+    }
+    .cover .pic {
+      display: none;
+    }
+    .cover span {
+      display: none;
     }
   }
 `

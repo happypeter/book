@@ -40,9 +40,8 @@ const Hero = styled.div`
     padding-top: 110px;
     margin-bottom: 50px;
   }
-  .search {
-    display: block;
-    margin: 0 auto;
+  @media (max-width: 630px) {
+    display: none
   }
 `
 
@@ -51,6 +50,10 @@ const Books = styled.div`
   justify-content: space-between;
   flex-wrap: wrap;
   margin-bottom: 218px;
+  @media (max-width: 630px) {
+   margin-top: 80px;
+   margin-bottom: 35px;
+  }
 `
 
 const Footer = styled.div`
@@ -60,5 +63,10 @@ const Footer = styled.div`
     padding: 80px 0;
     margin: 0;
     color: #fff;
+  }
+  @media (max-width: 630px) {
+    h2 {
+      padding: 40px 0;
+    }
   }
 `

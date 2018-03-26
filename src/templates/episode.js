@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'gatsby-link'
 import Header from '../components/Header'
 import Sidebar from '../components/Sidebar'
 import styled from 'styled-components'
@@ -19,6 +20,7 @@ class Episode extends React.Component {
     console.log('episodes...episodeId', episodes, episodeId)
     const episode = episodes.find(t => t.episodeId === episodeId)
     const ep = data.markdownRemark
+    console.log(bookId)
     return (
       <Wrap>
         <Header bookId={bookId} />
@@ -27,7 +29,7 @@ class Episode extends React.Component {
             <Sidebar episodes={episodes} episodeId={episodeId} bookId={bookId} />
           </Side>
           <Page className="docSearch-content">
-            <Title>{episode.title}</Title>
+            <Title to={`/${bookId}`}><h2>{episode.title}</h2></Title>
             <Main dangerouslySetInnerHTML={{ __html: ep.html }} />
           </Page>
         </Content>
@@ -60,24 +62,40 @@ const Wrap = styled.div`
   flex-direction: column;
 `
 
-const Title = styled.h1`
-  width: 810px;
+const Title = styled(Link) `
+  width: calc(100% - 135px);
   margin: 0 auto;
   text-align: center;
   flex-shrink: 0;
   border-radius: 6px 6px 0 0;
-  padding: 20px;
   font-size: 24px;
   background-color: #53A6AE;
   color: #fff;
   margin-top: 24px;
   margin-bottom: 24px;
+  h2 {
+    font-size: 24px;
+    color: #fff;
+  }
+  @media (max-width: 630px) {
+    width: 100%;
+    background: #fff;
+    margin-top: 20px;
+    padding: 0;
+    h2 {
+      display: inline;
+      color: #353131;
+      font-size: 24px;
+      padding: 20px 10px;
+      border-bottom: 4px solid #D47490;
+    }
+  }
 `
 
 const Main = styled.div`
   border-radius: 6px;
   background-color: #fff;
-  width: 810px;
+  width: calc(100% - 135px);
   margin: 0 auto;
   padding: 20px;
   font-size: 14px;
@@ -85,11 +103,17 @@ const Main = styled.div`
   img {
     width: 100%;
   }
+  @media (max-width: 630px) {
+    width:100%;
+  }
 `
 
 const Content = styled.div`
   display: flex;
   margin-top: 100px;
+  @media (max-width: 630px) {
+    margin-top: 80px;
+  }
 `
 
 const Side = styled.div`
@@ -101,6 +125,9 @@ const Side = styled.div`
   background-color: #53A6AE;
   flex-shrink: 0;
   overflow-y: auto;
+  @media (max-width: 630px) {
+    display:none;
+  }
 `
 
 const Page = styled.div`
@@ -111,4 +138,8 @@ const Page = styled.div`
   padding-bottom: 15px;
   margin-left: 320px;
   min-height: calc(100vh - 100px);
+  @media (max-width: 630px) {
+    margin-left: 0;
+    background: #fff;
+  }
 `

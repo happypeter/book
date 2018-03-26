@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="40px" height="30px" viewBox="0 0 40 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>logo</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="mobile-header" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-100.000000, -27.000000)">
+        <rect id="Rectangle" fill="#60BEC6" x="0" y="0" width="400" height="80"></rect>
+        <g id="header-content" transform="translate(100.000000, 24.000000)" fill="#FFFFFF">
+            <text id="好奇图书馆" font-family="PingFangSC-Regular, PingFang SC" font-size="24" font-weight="normal">
+                <tspan x="50.1993355" y="25">好奇图书馆</tspan>
+            </text>
+            <g id="logo" transform="translate(0.000000, 3.000000)" fill-rule="nonzero">
+                <ellipse id="head" cx="19.9834304" cy="16.3636364" rx="17.8034198" ry="13.4545455"></ellipse>
+                <path d="M39.7944019,0 C35.7995767,0 27.6134675,5.37758405 27.6134675,5.37758405 L36.6672895,13.0909091 C36.6672895,13.0909091 40.856292,3.42291783 39.7944019,0 Z" id="Path-2"></path>
+                <path d="M12.1809345,0 C8.18610917,0 0,5.37758405 0,5.37758405 L9.05382206,13.0909091 C9.05382206,13.0909091 13.2428244,3.42291783 12.1809345,0 Z" id="Path-2" transform="translate(6.176697, 6.545455) scale(-1, 1) translate(-6.176697, -6.545455) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

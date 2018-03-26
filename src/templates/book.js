@@ -71,6 +71,16 @@ const Hero = styled.div`
       align-items: center;
     }
   }
+  @media (max-width: 630px) {
+    background: #fff;
+    margin-top: 80px;
+    .contianed {
+      width: 100%;
+      height: auto;
+      padding: 0 20px;
+      justify-content: center;
+    }
+  }
 `
 
 const Img = styled.div`
@@ -86,11 +96,22 @@ const Img = styled.div`
     filter: grayscale(100%);
     filter: gray;
   }
+  @media (max-width: 630px) {
+    display: none;
+  }
 `
 const Title = styled.h1`
   font-size: 40px;
   color: #fff;
   margin-left: 40px;
+  @media (max-width: 630px) {
+    color: #353131;
+    font-size: 24px;
+    padding: 20px 10px;
+    display: inline;
+    margin-left: 0px;
+    border-bottom: 4px solid #D47490
+  }
 `
 const Toc = styled.div`
   .contained {
@@ -103,6 +124,14 @@ const Toc = styled.div`
       margin: 0 auto;
       margin-top: 110px;
       font-size: 24px;
+    }
+  @media (max-width: 630px) {   
+    width: 100%;
+    padding: 0 20px;
+    ul {
+        width: 100%;
+        margin-top: 30px;
+      }
     }
   }
 `
@@ -124,6 +153,12 @@ const StyledLink = styled(Link) `
   span {
     margin-left: 20px;
   }
+  @media (max-width: 630px) {
+    margin-bottom: 30px;
+    span {
+      font-size: 16px;
+    }
+  }
 `
 
 const Footer = styled.div`
@@ -133,5 +168,10 @@ const Footer = styled.div`
     padding: 80px 0;
     margin: 0;
     color: #fff;
+  }
+  @media (max-width: 630px) {
+    h2 {
+      padding: 40px 0;
+    }
   }
 `
