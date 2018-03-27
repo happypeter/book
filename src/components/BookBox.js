@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import BookCover from './BookCover'
-import { TapeRed } from '../constants/Colors'
 
 export default props => (
   <Wrap>
@@ -14,13 +13,13 @@ export default props => (
 
 const Wrap = styled.div`
   width: 35%;
-  border-top: 20px solid #90999C;
+  border-top: 20px solid #90999c;
   margin-bottom: 100px;
   box-sizing: content-box;
-  &: nth-child(odd){
-    padding-left: 15%;;
+  &: nth-child(odd) {
+    padding-left: 15%;
   }
-  &: nth-child(even){
+  &: nth-child(even) {
     padding-right: 15%;
   }
   @media (max-width: 630px) {
@@ -35,10 +34,10 @@ const Tape = styled.div`
   height: 64px;
   width: 170px;
   margin: 0 auto;
-  border-right: 20px solid #90999C;
-  border-left: 20px solid #90999C;
+  border-right: 20px solid #90999c;
+  border-left: 20px solid #90999c;
   @media (max-width: 630px) {
-    display: none
+    display: none;
   }
 `
 

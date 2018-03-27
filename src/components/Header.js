@@ -4,11 +4,11 @@ import Link from 'gatsby-link'
 import books from '../../config/index.json'
 import Search from '../components/DocSearch'
 import Logo from './Logo.js'
-import { primaryColor } from '../constants/Colors'
+import { PRIMARY_COLOR } from '../constants/Colors'
 
 export default ({ bookId }) => {
   const book = books && books.find(t => t.id === bookId)
-  const fill = window.innerWidth <= 630 ? '#FFF' : primaryColor
+  const fill = window.innerWidth <= 630 ? '#FFF' : PRIMARY_COLOR
   return (
     <Header>
       <Nav>

@@ -1,2 +1,1 @@
-export const TapeRed = '#a12c2c'
-export const primaryColor = '#60BEC6'
+export const PRIMARY_COLOR = '#60BEC6'
