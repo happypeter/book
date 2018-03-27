@@ -3,15 +3,18 @@ import styled from 'styled-components'
 import Link from 'gatsby-link'
 import books from '../../config/index.json'
 import Search from '../components/DocSearch'
+import Logo from './Logo.js'
 
 export default ({ bookId }) => {
   const book = books && books.find(t => t.id === bookId)
+  const fill = window.innerWidth <= 630 ? '#60BEC6' : '#FFF'
+  const BgFill = window.innerWidth <= 630 ? '#FFF' : '#60BEC6'
   return (
     <Header>
       <Nav>
         <StyledLink to="/">
           {' '}
-          <img src={require('../img/logo.svg')} />
+          <Logo BgFill={BgFill} fill={fill} />
           好奇图书馆
         </StyledLink>
 
@@ -19,13 +22,6 @@ export default ({ bookId }) => {
           <StyledLink to={`/${book.id}`}>&nbsp;> {book.title}</StyledLink>
         )}
       </Nav>
-      <HeaderMobile>
-        <MobileLink to="/">
-          {' '}
-          <img src={require('../img/logo-mobile.svg')} />
-          好奇图书馆
-        </MobileLink>
-      </HeaderMobile>
       <Search />
     </Header>
   )
@@ -57,34 +53,16 @@ const StyledLink = styled(Link) `
   display: flex;
   color: #151313;
   line-height: 100px;
-
+  align-items:  center;
   font-size: 24px;
-  img {
+  svg {
     margin-right: 18px;
   }
-`
-
-const HeaderMobile = styled.div`
-  display:none;
   @media (max-width: 630px) {
-    display: block;
-    background: #60BEC6;
-  }
-`
-
-const MobileLink = styled(Link) `
-  display: flex;
-  color: #fff;
-  line-height: 80px;
-  font-size: 24px;
-  img {
-    margin-right: 18px;
+    color: #fff;
   }
 `
 
 const Nav = styled.div`
   display: flex;
-  @media (max-width: 630px) {
-    display: none;
-  }
 `
