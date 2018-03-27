@@ -12,21 +12,29 @@ export default props => (
 )
 
 const Wrap = styled.div`
-  width: 35%;
+  width: 40%;
   border-top: 20px solid #90999c;
   margin-bottom: 100px;
   box-sizing: content-box;
   &: nth-child(odd) {
-    padding-left: 15%;
+    padding-left: 10%;
+
   }
   &: nth-child(even) {
-    padding-right: 15%;
+    padding-right: 10%;
   }
   @media (max-width: 630px) {
     width: 100%;
     border-top: none;
     margin-top: 35px;
     margin-bottom: 0;
+    box-sizing: border-box;
+    &: nth-child(odd) {
+      padding: 0;
+    }
+    &: nth-child(even) {
+      padding: 0;
+    }
   }
 `
 

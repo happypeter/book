@@ -8,7 +8,7 @@ import Header from '../components/Header'
 
 export default () => {
   return (
-    <div>
+    <Wrap>
       <Header />
       <Hero>
         <h1>好奇图书馆</h1>
@@ -26,9 +26,18 @@ export default () => {
       <Footer>
         <h2>好奇图书馆</h2>
       </Footer>
-    </div>
+    </Wrap>
   )
 }
+
+const Wrap = styled.div`
+  @media (max-width: 630px) {
+    display: flex;
+    flex-direction: column;
+    height: 100vh
+  }
+
+`
 
 const Hero = styled.div`
   height: 346px;
@@ -51,8 +60,10 @@ const Books = styled.div`
   flex-wrap: wrap;
   margin-bottom: 218px;
   @media (max-width: 630px) {
-   margin-top: 80px;
-   margin-bottom: 35px;
+    flex-grow: 1;
+    overflow-y: scroll;
+    margin-top: 80px;
+    margin-bottom: 35px;
   }
 `
 
