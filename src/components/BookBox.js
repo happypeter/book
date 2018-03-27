@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import BookCover from './BookCover'
 
 export default props => (
-  <Wrap>
+  <Wrap className="wrap">
     <CoverWrap>
       <Tape />
       <BookCover {...props} />
@@ -16,11 +16,10 @@ const Wrap = styled.div`
   border-top: 20px solid #90999c;
   margin-bottom: 100px;
   box-sizing: content-box;
-  &: nth-child(odd) {
+  &:nth-child(odd) {
     padding-left: 10%;
-
   }
-  &: nth-child(even) {
+  &:nth-child(even) {
     padding-right: 10%;
   }
   @media (max-width: 630px) {
@@ -29,11 +28,14 @@ const Wrap = styled.div`
     margin-top: 35px;
     margin-bottom: 0;
     box-sizing: border-box;
-    &: nth-child(odd) {
+    &:nth-child(odd) {
       padding: 0;
     }
-    &: nth-child(even) {
+    &:nth-child(even) {
       padding: 0;
+    }
+    &:nth-child(last) {
+      margin-bottom: 35px;;
     }
   }
 `
