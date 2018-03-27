@@ -106,6 +106,13 @@ const Main = styled.div`
   @media (max-width: 630px) {
     width:100%;
   }
+  .gatsby-highlight {
+    width: 100%;
+    pre {
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+  }
 `
 
 const Content = styled.div`
