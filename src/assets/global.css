@@ -231,11 +231,11 @@ h1 {
   content: '';
   width: 0px;
   height: 0px;
-  background: #90999C;
+  background: #90999c;
   z-index: 1000;
   top: -7px;
-  border-top: 1px solid #90999C;
-  border-right: 1px solid #90999C;
+  border-top: 1px solid #90999c;
+  border-right: 1px solid #90999c;
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
   border-radius: 2px;
@@ -317,7 +317,7 @@ h1 {
 
 .algolia-autocomplete .ds-cursor .algolia-docsearch-suggestion--wrapper {
   background: #f1f1f1;
-  box-shadow: inset -4px 0 0 #D47490;
+  box-shadow: inset -4px 0 0 #d47490;
 }
 
 .algolia-autocomplete .algolia-docsearch-suggestion--highlight {
@@ -342,7 +342,7 @@ h1 {
   .algolia-docsearch-suggestion--highlight {
   padding: 0 0 1px;
   background: inherit;
-  box-shadow: inset 0 -2px 0 0 #A7CBD0;
+  box-shadow: inset 0 -2px 0 0 #a7cbd0;
   color: inherit;
 }
 
@@ -372,7 +372,7 @@ h1 {
   font-size: 14px;
   letter-spacing: 0.08em;
   font-weight: 700;
-  background-color: #90999C;
+  background-color: #90999c;
   text-transform: uppercase;
   color: #fff;
   margin: 0;
@@ -441,7 +441,7 @@ h1 {
   padding: 8px 0;
   text-align: center;
   font-size: 1.2em;
-  background-color: #90999C;
+  background-color: #90999c;
   margin-top: -8px;
 }
 
@@ -510,6 +510,20 @@ h1 {
   margin-right: 5px;
 }
 
-
-
-
+/* 隐藏搜索框右侧的小叉号， hide the cancel icon to thr right of input */
+input[type='text']::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0;
+}
+input[type='text']::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
+input[type='search']::-webkit-search-decoration,
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-results-button,
+input[type='search']::-webkit-search-results-decoration {
+  display: none;
+}
