@@ -15,11 +15,11 @@ export default ({ bookId }) => {
         <StyledLink to="/">
           {' '}
           <Logo fill={fill} />
-          好奇图书馆
+          好奇图书馆 &nbsp;
         </StyledLink>
 
         {book && (
-          <StyledLink to={`/${book.id}`}>&nbsp;> {book.title}</StyledLink>
+          <StyledLink to={`/${book.id}`}>{window.innerWidth <= 630 ? null : `> ${book.title}`}</StyledLink>
         )}
       </Nav>
       <Search />
@@ -49,7 +49,7 @@ const Header = styled.div`
   }
 `
 
-const StyledLink = styled(Link)`
+const StyledLink = styled(Link) `
   display: flex;
   color: #151313;
   line-height: 100px;

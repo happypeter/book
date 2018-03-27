@@ -13,28 +13,30 @@ export default ({ data, pathContext }) => {
   return (
     <Wrap>
       <Header bookId={bookId} />
-      <Hero>
-        <div className="contianed">
-          <div className="cover">
-            <Img>
-              <img src={coverPngUrl(book)} />
-            </Img>
-            <Title>{book.title}</Title>
+      <Content>
+        <Hero>
+          <div className="contianed">
+            <div className="cover">
+              <Img>
+                <img src={coverPngUrl(book)} />
+              </Img>
+              <Title>{book.title}</Title>
+            </div>
           </div>
-        </div>
-      </Hero>
-      <Toc>
-        <div className="contained">
-          <ul>
-            {toc.map(t => (
-              <StyledLink key={t.episodeId} to={`${bookId}/${t.episodeId}`}>
-                <img src={require('../img/popcorn.svg')} />
-                <span>{t.title}</span>
-              </StyledLink>
-            ))}
-          </ul>
-        </div>
-      </Toc>
+        </Hero>
+        <Toc>
+          <div className="contained">
+            <ul>
+              {toc.map(t => (
+                <StyledLink key={t.episodeId} to={`${bookId}/${t.episodeId}`}>
+                  <img src={require('../img/popcorn.svg')} />
+                  <span>{t.title}</span>
+                </StyledLink>
+              ))}
+            </ul>
+          </div>
+        </Toc>
+      </Content>
       <Footer>
         <h2>好奇图书馆</h2>
       </Footer>
@@ -55,7 +57,20 @@ export const query = graphql`
   }
 `
 
-const Wrap = styled.div``
+const Wrap = styled.div`
+  @media (max-width: 630px) {
+    display: flex;
+    flex-direction: column;
+    height: 100vh
+  }
+`
+
+const Content = styled.div`
+   @media (max-width: 630px) {
+    flex-grow: 1;
+    overflow-y: scroll;
+   } 
+`
 
 const Hero = styled.div`
   background: linear-gradient(to right, #469CA6 0%, #60BEC6 100%);
