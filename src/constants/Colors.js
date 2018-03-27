@@ -1,1 +1,6 @@
 export const PRIMARY_COLOR = '#60BEC6'
+export const ACCENT_RED = '#D47490'
+export const DIVIDER_GRAY = '#90999C'
+export const DIVIDER_LIGHT = 'D1D1D1'
+export const PRIMARY_DARK = '#53A6AE'
+export const PRIMARY_LIGHT = '#A7CBD0'
