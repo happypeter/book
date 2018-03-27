@@ -13,9 +13,16 @@ export default props => (
 )
 
 const Wrap = styled.div`
-  width: 50%;
+  width: 35%;
   border-top: 20px solid #90999C;
   margin-bottom: 100px;
+  box-sizing: content-box;
+  &: nth-child(odd){
+    padding-left: 15%;;
+  }
+  &: nth-child(even){
+    padding-right: 15%;
+  }
   @media (max-width: 630px) {
     width: 100%;
     border-top: none;
