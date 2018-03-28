@@ -14,7 +14,7 @@ export default ({ bookId }) => {
       <Nav>
         <StyledLink to="/">
           {' '}
-          <Logo fill={fill} />
+          <Logo width="41px" height="41px" fill={fill} />
           好奇图书馆 &nbsp;
         </StyledLink>
 

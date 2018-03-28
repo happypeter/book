@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import BookCover from './BookCover'
 
 export default props => (
-  <Wrap className="wrap">
+  <Wrap>
     <CoverWrap>
       <Tape />
       <BookCover {...props} />
@@ -33,9 +33,6 @@ const Wrap = styled.div`
     }
     &:nth-child(even) {
       padding: 0;
-    }
-    &:nth-child(last) {
-      margin-bottom: 35px;;
     }
   }
 `

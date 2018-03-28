@@ -1,13 +1,14 @@
-import React from 'react'
+import React from "react";
 
 const Logo = props => (
-  <svg width={55} height={41} viewBox="0 0 55 41" {...props}>
+  <svg width={100} height={100} viewBox="0 0 100 100" {...props}>
     <title>logo-main</title>
-    <g fillRule="nonzero">
-      <ellipse cx={27.477} cy={22.5} rx={24.48} ry={18.5} />
-      <path d="M54.717 0C49.224 0 37.97 7.394 37.97 7.394L50.418 18s5.76-13.293 4.3-18zM.237 0C5.73 0 16.986 7.394 16.986 7.394L4.536 18S-1.222 4.707.238 0z" />
+    <g fill={props.fill} fillRule="nonzero">
+      <ellipse cx={50} cy={62.786} rx={50} ry={37.786} />
+      <path d="M.782 0C23.23 0 34.297 20.234 45.73 28.333 36.416 36.776 26.273 37.5 7.814 44.096 2.812 29.402-1.908 11.093.782 0zM99.95 0C77.5 0 66.433 20.234 55 28.333c9.315 8.443 19.458 9.167 37.917 15.763C97.918 29.402 102.639 11.093 99.949 0z" />
     </g>
   </svg>
-)
+);
 
-export default Logo
+export default Logo;
+

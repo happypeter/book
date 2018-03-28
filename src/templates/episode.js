@@ -99,16 +99,39 @@ const Main = styled.div`
   margin: 0 auto;
   padding: 20px;
   font-size: 14px;
+  line-height:1.8;
   flex-grow: 1;
+  h3 {
+    margin: 30px 0;
+    font-size: 40px;
+  }
   img {
     width: 100%;
+    margin: 0 auto;
   }
+  blockquote {
+    background: #E0EEF4;
+    margin: 1em 0;
+    padding: 1em 30px;
+    border-left: 10px solid #377C9C;
+    width: 100%;
+  }
+
+  a {
+    color: #53A6AE;
+  }
+  
   @media (max-width: 630px) {
     width:100%;
+    h3 {
+      margin: 20px 0;
+      font-size: 30px;
+    }
   }
   .gatsby-highlight {
     width: 100%;
     pre {
+      line-height: 1.8;
       white-space: pre-wrap;
       word-wrap: break-word;
     }
