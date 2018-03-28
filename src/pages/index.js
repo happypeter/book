@@ -63,7 +63,8 @@ const Books = styled.div`
     flex-grow: 1;
     overflow-y: scroll;
     margin-top: 80px;
-    margin-bottom: 35px;
+    margin-bottom: 0;
+    padding-bottom: 35px
   }
 `
 
