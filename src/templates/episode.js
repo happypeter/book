@@ -101,12 +101,15 @@ const Main = styled.div`
   font-size: 14px;
   line-height:1.8;
   flex-grow: 1;
-  h3 {
+  color: #454952;
+  h2 {
     margin: 30px 0;
     font-size: 40px;
+    font-weight: normal;
   }
   img {
-    width: 100%;
+    display: block;
+    max-width: 100%;
     margin: 0 auto;
   }
   blockquote {
@@ -115,6 +118,7 @@ const Main = styled.div`
     padding: 1em 30px;
     border-left: 10px solid #377C9C;
     width: 100%;
+    font-size: 16px;
   }
 
   a {
@@ -123,7 +127,7 @@ const Main = styled.div`
   
   @media (max-width: 630px) {
     width:100%;
-    h3 {
+    h2 {
       margin: 20px 0;
       font-size: 30px;
     }

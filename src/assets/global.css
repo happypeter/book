@@ -18,12 +18,16 @@ h1 {
     list-style: none;
     counter-reset: count;
     position: relative;
+    padding: 0;
+  }
+  li {
+    padding-left: 18px;
   }
   li::before {
     content: "\02022";
     color: #53A6AE; 
     position: absolute;
-    left: 25px;
+    left: 3px;
   }
 
 #components-layout-demo-responsive .logo {
